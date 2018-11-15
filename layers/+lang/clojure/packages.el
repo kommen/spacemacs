@@ -10,7 +10,10 @@
 ;;; License: GPLv3
 
 (setq clojure-packages
-      '(cider
+      '((cider :location (recipe :fetcher github
+                                 :repo "kommen/cider"
+                                 :files ("*.el" (:exclude ".dir-locals.el"))
+                                 :branch "develop"))
         cider-eval-sexp-fu
         (clj-refactor :toggle clojure-enable-clj-refactor)
         clojure-cheatsheet
